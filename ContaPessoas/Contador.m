@@ -14,6 +14,7 @@
     int boy;
     int girl;
 }
+static Contador *instance = nil;
 
 -(id)init {
     self = [super init];
@@ -22,6 +23,11 @@
         girl = 0;
     }
     return self;
+}
+
++ (Contador *)instance {
+    if(instance == nil) instance = [[Contador alloc] init];
+    return instance;
 }
 
 - (void)maisUmCueca {
@@ -37,6 +43,10 @@
 
 -(int)getGirls {
     return girl;
+}
+
+-(int)getTotal {
+    return boy + girl;
 }
 
 
