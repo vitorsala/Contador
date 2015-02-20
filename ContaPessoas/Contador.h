@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Vinicius Miana. All rights reserved.
 //
 
-@interface Contador : NSObject
+#import "ContadorDelegate.h"
 
+@interface Contador : NSObject
+@property id<ContadorDelegate> delegate;
 - (void)maisUmCueca;
 - (void)maisUmaGata;
 

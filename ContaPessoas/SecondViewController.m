@@ -7,8 +7,6 @@
 //
 
 #import "SecondViewController.h"
-#import "Contador.h"
-
 @interface SecondViewController () {
       Contador *contador;
 }
@@ -20,9 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     contador = [Contador instance];
+    contador.delegate = self;
+    [self click:self];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -35,5 +33,11 @@
     _total.text = [NSString stringWithFormat:@"%d", [contador getGirls] + [contador getBoys] ];
 }
 
+- (void)passGirls:(int)g Boys:(int)b AndTotal:(int) t{
+    NSLog(@"g:%d\nb:%d\nt:%d\n",g,b,t);
+    _totalBoys.text = [NSString stringWithFormat: @"%d", b];
+    _totalGirls.text = [NSString stringWithFormat: @"%d", g];
+    _total.text = [NSString stringWithFormat:@"%d", t];
+}
 
 @end

@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contador.h"
+#import "FirstViewController.h"
+#import "ContadorDelegate.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController<ContadorDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *totalBoys;
 @property (weak, nonatomic) IBOutlet UILabel *totalGirls;
