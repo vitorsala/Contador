@@ -14,7 +14,6 @@
     int boy;
     int girl;
 }
-@synthesize delegate;
 static Contador *instance = nil;
 
 -(id)init {
@@ -32,12 +31,12 @@ static Contador *instance = nil;
 }
 
 - (void)maisUmCueca {
-    boy = boy + 1;
-    [delegate passGirls:girl Boys:boy AndTotal:[self getTotal]];
+    boy++;
+    [_delegate passGirls:girl Boys:boy AndTotal:[self getTotal]];
 }
 - (void)maisUmaGata {
     girl++;
-    [delegate passGirls:girl Boys:boy AndTotal:[self getTotal]];
+    [_delegate passGirls:girl Boys:boy AndTotal:[self getTotal]];
 }
 
 -(int)getBoys {

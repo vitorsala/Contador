@@ -189,9 +189,11 @@
 				TargetAttributes = {
 					27A1999F1A94B2A8008DC684 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = KY9XTC3U67;
 					};
 					27A199BB1A94B2A8008DC684 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = KY9XTC3U67;
 						TestTargetID = 27A1999F1A94B2A8008DC684;
 					};
 				};
@@ -391,6 +393,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -402,6 +406,7 @@
 				INFOPLIST_FILE = ContaPessoasTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContaPessoas.app/ContaPessoas";
 			};
 			name = Debug;
@@ -410,6 +415,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -417,6 +424,7 @@
 				INFOPLIST_FILE = ContaPessoasTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContaPessoas.app/ContaPessoas";
 			};
 			name = Release;

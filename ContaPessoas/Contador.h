@@ -9,7 +9,8 @@
 #import "ContadorDelegate.h"
 
 @interface Contador : NSObject
-@property id<ContadorDelegate> delegate;
+@property(weak) id<ContadorDelegate> delegate;
+
 - (void)maisUmCueca;
 - (void)maisUmaGata;
 
